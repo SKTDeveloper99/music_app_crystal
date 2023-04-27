@@ -165,6 +165,9 @@ class PlaylistPageState extends State<PlaylistPage> with WidgetsBindingObserver 
       debugShowCheckedModeBanner: false,
       scaffoldMessengerKey: _scaffoldMessengerKey,
       home: Scaffold(
+        appBar: AppBar(
+          title: const Text('A Playlist for You!'),
+        ),
         body: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,

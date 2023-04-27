@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:music_app_crystal/example_playlist.dart';
+import 'package:music_app_crystal/example_radio.dart';
+import 'package:music_app_crystal/funny_dance.dart';
+import 'package:music_app_crystal/settings.dart';
 
 class BaseNavigation extends StatefulWidget {
   const BaseNavigation({super.key});
@@ -13,19 +16,10 @@ class _BaseNavigationState extends State<BaseNavigation> {
   static const TextStyle optionStyle =
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
+    FunnyDance(),
     PlaylistPage(),
-    Text(
-      'Index 2: Fun Interaction',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: Settings',
-      style: optionStyle,
-    ),
+    RadioPage(),
+    SettingsPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -37,9 +31,6 @@ class _BaseNavigationState extends State<BaseNavigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Crystal Musical App'),
-      ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),

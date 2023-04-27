@@ -10,16 +10,15 @@ import 'package:flutter/services.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:music_app_crystal/common.dart';
 
-void main() => runApp(const MyApp());
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+class RadioPage extends StatefulWidget {
+  const RadioPage({Key? key}) : super(key: key);
 
   @override
-  MyAppState createState() => MyAppState();
+  RadioPageState createState() => RadioPageState();
 }
 
-class MyAppState extends State<MyApp> with WidgetsBindingObserver {
+class RadioPageState extends State<RadioPage> with WidgetsBindingObserver {
   final _player = AudioPlayer();
 
   @override
